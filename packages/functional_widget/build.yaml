@@ -13,4 +13,6 @@ builders:
         build_extensions: { '.dart': ['.functional_widget.g.part'] }
         auto_apply: dependents
         build_to: cache
+        # see https://github.com/dart-lang/build/issues/2701#issuecomment-922857918
+        required_inputs: ['graphql.dart']
         applies_builders: ['source_gen|combining_builder']
